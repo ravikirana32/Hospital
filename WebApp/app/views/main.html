@@ -1,23 +1,38 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div ng-include src="template.url" ></div>
+
+<div class="row">
+<div class="col-md-2" style="background-color:white;height:500px;border-right:1px solid black;" >
+    <div ng-include src="template2.url">
+        
+    </div>
 </div>
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<div class="col-md-10">
+<div ng-switch on="(currentpage == 'doctor')">
+    <div ng-switch-when="true" ng-controller="doctorController">
+        <div ng-include src="doctor.url" ></div>
+    </div>
+    
 </div>
+<div ng-switch on="(currentpage == 'appointment')">
+    <div ng-switch-when="true" ng-controller="appointmentController">
+        <div ng-include src="appointment.url" ></div>
+    </div>
+</div>
+<div ng-switch on="(currentpage == 'settings')">
+    <div ng-switch-when="true" ng-controller="settingsController">
+        <div ng-include src="settings.url" ></div>
+    </div>
+</div>
+<div ng-switch on="(currentpage == 'demo')">
+    <div ng-switch-when="true" ng-controller="demoController">
+        <div ng-include src="demo.url" ></div>
+    </div>
+</div>
+<div ng-switch on="(currentpage == 'demo1')">
+    <div ng-switch-when="true" ng-controller="demo1Controller">
+        <div ng-include src="demo1.url" ></div>
+    </div>
+</div>
+</div>
+</div>
+<div ng-include src="template1.url" ></div>

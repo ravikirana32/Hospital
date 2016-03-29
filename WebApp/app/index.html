@@ -1,83 +1,68 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-  </head>
-  <body ng-app="webAppApp">
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<!DOCTYPE html>
 
-    <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
+<!-- define angular app -->
+<html ng-app="newApp">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+<head>
+  <!-- CSS -->
+  <meta charset=utf-8>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Hospital Mangement</title>
+  <link href="libs/bootstrap-3.3.4-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <link href="css/agency.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+  
+  <script src="libs/jquery.min.js"></script>
+  <script src="libs/angular.min.js"></script>
+  <script src="libs/angular-route.min.js"></script>
+  <script src="routes/routes.js"></script>
+  <script src="libs/bootstrap-3.3.4-dist/js/bootstrap.js"></script>
+  <script src="controllers/mainctrl.js"></script>
+  <script src="controllers/demo1ctrl.js"></script>
+  <script src="controllers/doctorctrl.js"></script>
+  <script src="controllers/appointmentctrl.js"></script>
+  <script src="controllers/democtrl.js"></script>
+  <script src="controllers/loginctrl.js"></script>
+  <script src="controllers/settingsctrl.js"></script>
+  <script src="libs/agency.js"></script>
+  
+     <!-- Custom Fonts -->
+    <link href="/libs/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  <!--<script src="./vender/classie.js"></script>-->
+      <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanskannada.css);
+    body { font-family: "Noto Sans Kannada", sans-serif; font-size: 19.0px; line-height: 1.11em; }
+        pre.texts {
+            text-align: justify;
+            text-indent: 0px;
+        }
+    </style>
 
-            <a class="navbar-brand" href="#/">webApp</a>
-          </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+</head>
 
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+<!-- define angular controller -->
+<body style="background:silver">
+<div class="container-fluid" ng-view style="background:white;margin-top: 50px;margin-bottom:75px;margin:0px;padding:0px;"></div>
+<!--<div class="row" style="margin:0px;">
+    <div class="col-md-1" style="background:green;color:red;visibility:hidden;"></div>
+    <div class="col-md-10" style="background:white;margin-top: 50px;margin-bottom:75px;margin:0px;padding:0px;">
+      <div class="container-fluid" ng-view></div>
     </div>
+    <div class="col-md-1" style="background:green;color:red;visibility:hidden;"></div>-->
 
-    <div class="container">
-    <div ng-view=""></div>
-    </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
+  
+  
+  <!-- Other scripts -->
+  
 </body>
+
 </html>
