@@ -1,9 +1,9 @@
-<ion-view view-title="Playlists">
-  <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
-      </ion-item>
-    </ion-list>
+<ion-view view-title="Hospitals">
+  <ion-content style="background-color: black;">
+    <div class="card" ng-repeat="hospital in newdata" style="border-radius: 10px;">
+	  <div class="item item-text-wrap" style="background-color: darkcyan;color:white;border-radius: 10px;" ng-click="login(hospital.name)">
+	    {{hospital.name}}
+	  </div>
+	</div>
   </ion-content>
 </ion-view>
