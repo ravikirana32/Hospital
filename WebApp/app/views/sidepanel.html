@@ -1,6 +1,6 @@
-<div style="background-color:white;">
+<div>
 	
-		<button ng-click="navigate('demo')" class="btn btn-primary">demo</button><br/>
+		<!--<button ng-click="navigate('demo')" class="btn btn-primary">demo</button><br/>
 	
 		<button ng-click="navigate('doctor')" class="btn btn-primary">doctor</button><br/>
 	
@@ -8,6 +8,23 @@
 	
 		<button ng-click="navigate('settings')" class="btn btn-primary">settings</button><br/>
 	
-		<button ng-click="navigate('demo1')" class="btn btn-primary">demo1 us</button><br/>
+		<button ng-click="navigate('demo1')" class="btn btn-primary">demo1 us</button><br/> -->
+
+		
+
+		<script>
+			$("li a").click(function () {
+				$(this).parent().addClass("selected");
+		        $(this).parent().siblings().removeClass("selected");
+	   		});
+		</script>
+
+		<ul style="background-color: #E0DDDB">
+		  <li><a ng-click="navigate('demo')">Demo</a></li>
+		  <li><a ng-click="navigate('doctor')">Doctors</a></li>
+		  <li><a ng-click="navigate('appointment')">Appointment</a></li>
+		  <li><a ng-click="navigate('settings')">Settings</a></li>
+		  <li><a ng-click="navigate('demo1')">Demo1 us</a></li>
+		</ul>
 	
 </div>
