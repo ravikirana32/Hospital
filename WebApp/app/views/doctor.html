@@ -1,4 +1,36 @@
-<div  >
-				<h1>doctor</h1>
+<!-- This html represent the List of Doctor information availabel on selected Hospitals -->
 
-			</div>
+<div  class="doctorList">
+	
+	<table class="table table-bordered table-striped">
+
+
+		<thead class="dynamicTheadCol">
+		        <tr>
+					<th style="width:70px;">S.No</th>
+					<th>Name</th>
+					<th style="padding-top: 0px;margin-top: 0px;">
+						<div style="text-align:center;">Avilable Timings</div>
+					</th>
+					<th>Specialization</th>
+					<th>Action</th>
+				</tr>
+		</thead>
+
+		<tbody>
+
+			<tr ng-repeat=" list in doctorList">
+
+				<td>{{ list.sno }}</td>
+				<td>{{ list.name }}</td>
+				<td>{{ list.timings }}</td>
+				<td>{{list.Specialization}}</td>
+				<td>Delete</td>
+			</tr>
+			
+
+		</tbody>
+
+	</table>	
+
+</div>
