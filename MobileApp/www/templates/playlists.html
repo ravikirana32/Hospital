@@ -1,9 +1,14 @@
 <ion-view view-title="Hospitals">
   <ion-content style="background-color: black;">
     <div class="card" ng-repeat="hospital in newdata" style="border-radius: 10px;">
-	  <div class="item item-text-wrap" style="background-color: darkcyan;color:white;border-radius: 10px;" ng-click="login(hospital.name)">
+    	<a href="#/app/playlists/{{hospital.name}}">
+	  <div class="item item-text-wrap" style="background-color: darkcyan;color:white;border-radius: 10px;" >
 	    {{hospital.name}}
 	  </div>
+	  </a>
 	</div>
-  </ion-content>
+	<!--<ion-item ng-repeat="playlist in newdata" href="#/app/playlists/{{playlist.name}}">
+        {{playlist.name}}
+      </ion-item>
+  </ion-content>-->
 </ion-view>

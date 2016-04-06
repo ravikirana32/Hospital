@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
-
-.controller('AppCtrl', function($scope, $ionicModal, $timeout,ngGPlacesAPI,$rootScope) {
+//ngGPlacesAPI
+.controller('AppCtrl', function($scope, $ionicModal, $timeout,$rootScope) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -15,6 +15,8 @@ angular.module('starter.controllers', [])
   $rootScope.currentLatLong.lat=0;
   $rootScope.currentLatLong.lng=0;
   $scope.hospitalName='';
+  $scope.newdata=[];
+  $scope.newdata=[{"name":"H1"},{"name":"H2"},{"name":"H3"},{"name":"H4"},{"name":"H5"},{"name":"H6"}];
 
   $scope.getLocation=function() {
     console.log("geolocation");
@@ -33,7 +35,8 @@ function showPosition(position) {
     $scope.lon=position.coords.longitude;
     $rootScope.currentLatLong.lat=position.coords.latitude;
     $rootScope.currentLatLong.lng=position.coords.longitude;
-    $scope.search('hospital','hospital');//doctor,dentist,hospital
+    
+    //$scope.search('hospital','hospital');//doctor,dentist,hospital
 }
 
 
@@ -43,7 +46,7 @@ console.log("controller created");
     $scope.key='';
     //$scope.lat=12.9819373;
     //$scope.lon= 77.73341219999999;
-    $scope.newdata=[];
+    
 
     
     $scope.search=function(name,val){
@@ -104,7 +107,7 @@ console.log("controller created");
       return data;
     });
   };
-  $scope.getDetails();
+  //$scope.getDetails();
 
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
@@ -148,4 +151,25 @@ console.log("controller created");
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+  console.log($stateParams.hospitalName);
+  $scope.currentHospitalName=$stateParams.hospitalName;
+  $scope.doctors=true;
+  $scope.appointments=false;
+  $scope.demos=false;
+
+  $scope.toggleView=function(view){
+    console.log("hkkkhk  "+view);
+    $scope.doctors=false;
+    $scope.appointments=false;
+    $scope.demos=false;
+
+    if(view=="doctors"){
+      $scope.doctors=true;
+    }else if(view=="appointments"){
+      $scope.appointments=true;
+    }else if(view=="demos"){
+      $scope.demos=true;
+    }
+    console.log($scope.doctors+"  "+$scope.appointments+"  "+$scope.demos);
+  }
 });
