@@ -1,4 +1,4 @@
-var newapp=angular.module('newApp', ['ngRoute']);
+var newapp=angular.module('newApp', ['ngRoute','ui.bootstrap']);
 
 newapp.config(['$routeProvider',
   function($routeProvider) {
@@ -36,8 +36,3 @@ newapp.config(['$routeProvider',
       });
   }]);
 
-//main
-//doctor
-//appointment
-//settings guide
-//demo1 us
